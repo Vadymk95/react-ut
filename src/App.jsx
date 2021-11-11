@@ -1,11 +1,28 @@
-import React from 'react';
+import React, { useEffect, UseState } from 'react';
 import './App.css';
+import List from './components/List';
+import Search from './components/Search';
+
+const data = [
+  'HTML',
+  'CSS',
+  'JavaScript',
+  'TypeScript',
+  'React',
+  'Vue',
+  'Angular',
+  'NodeJS',
+];
 
 const App = () => {
   return (
-    <div className="app">
-      <h1>Hello world!</h1>
-    </div>
+    <h1 className="app">
+      <span>Hello world!</span>
+      <div className="app-header">
+        <List items={data} />
+      </div>
+      <Search />
+    </h1>
   );
 };
 
